@@ -1,0 +1,245 @@
+.contacts { 
+	background: $bg--dark;
+	color: white;
+}
+
+.contacts__wrapper {
+	@include container-fluid();
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 50px 0;
+}
+
+
+.contacts__title-wrapper {
+	width: 100%;
+	text-align: center;
+}
+.contacts__title	{
+	display: inline-block;
+	padding: 0px 3px 4px;
+	font-size: 38px;
+
+	text-align: center;
+	border-top: 4px solid $yellow;
+	border-bottom: 4px solid $yellow;
+}
+
+.contacts__info {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 15px;
+	font-size: 17px;
+	line-height: 22px;
+	letter-spacing: 1px;
+}
+
+.contacts__text {
+	display: block;
+	b {
+		color: $yellow;
+	}
+	
+	a {
+		color: white;
+		text-decoration: none;
+	}
+
+	a:hover,
+	a:focus {
+		color: $yellow;
+		text-decoration: underline;
+	}
+}
+
+.contacts__social-btns-list {
+	margin: 30px 0;
+	margin-left: 0;
+	padding-left: 0;
+
+	li {
+		list-style: none;
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+a[class^=contacts__sbl] {
+	display: inline-block;
+	font-size: 0;
+	margin: 0 5px;
+	width: 40px;
+	height: 40px;
+
+	svg {
+		width: 40px;
+		height: 40px;
+	}
+	svg:hover path,
+	svg:focus path{
+		fill: $yellow;
+	}
+}
+
+.contacts__payment-methods {
+	margin-left: 0;
+	padding-left: 0;
+
+	li {
+		display: inline-block;
+		padding: 0;
+		margin: 0 2px;
+		list-style: none;
+		font-size: 0;
+
+		img {
+			width: 50px;
+			cursor: pointer;
+		}
+	}
+}
+
+.contacts__form {
+	position: relative;
+	box-sizing: border-box;
+	widht: 320px;
+	padding: 0;
+	padding-top: 25px;
+	margin: 0 auto; 
+
+	input,
+	textarea {
+		display: block;
+		box-sizing: border-box;
+		width: 300px;
+		margin: 5px auto;
+		padding: 5px 15px;
+		background: transparent;
+		border: 0;
+		border-bottom: 2px solid $yellow;
+	}
+
+	textarea {
+		width: 290px;
+		margin-top: 25px;
+		margin-bottom: 25px;
+		border: 2px solid $yellow;
+		height: 70px;
+		resize: none;
+	}
+
+	input:hover,
+	input:focus,
+	textarea:hover,
+	textarea:focus {
+		text-decoration: none;
+		outline: none;
+
+	}
+
+	.contacts__input-wrapper {
+		position: relative;
+		display: block;
+		box-sizing: border-box;
+		width: 300px;
+		margin: 5px auto;
+
+		&::before {
+			position: absolute;
+			content: "";
+			left: 0px;
+			top: 18px;
+			width: 2px;
+			height: 10px;
+		  background: $yellow;
+		}
+	}
+	
+	.contacts__form-btn {
+		display: block;
+		width: 150px;
+		padding: 8px;
+		text-transform: uppercase;
+		font-size: 14px;
+		border: 2px solid $yellow;
+
+		&:hover,
+		&:focus {
+			background: $yellow;
+		}
+	}
+
+	// input:hover + .contacts__input-comment,
+	// textarea:hover + .contacts__input-comment {
+	// 	color: $yellow;
+	// }
+	
+	// input:focus + .contacts__input-comment,
+	// textarea:focus + .contacts__input-comment {
+	// 	top: -55px;
+	// 	left: 5px;
+
+	// 	&::before {
+	// 		position: absolute;
+	// 		content: "";
+	// 		left: -5px;
+	// 		top: 40px;
+	// 		width: 2px;
+	// 		height: 10px;
+	// 	  background: $yellow;
+	// 	}
+	// }
+
+	// input:not([value=""]):not(:focus):invalid + .contacts__input-comment {
+	// 	top: -55px;
+	// 	left: 5px;
+
+	// 	&::before {
+	// 		position: absolute;
+	// 		content: "";
+	// 		left: -5px;
+	// 		top: 40px;
+	// 		width: 2px;
+	// 		height: 10px;
+	// 	  background: $yellow;
+	// 	}
+	// }
+
+	// 	textarea:not([value=""]):not(:focus):invalid + .contacts__input-comment {
+	// 	top: -55px;
+	// 	left: 5px;
+
+	// 	&::before {
+	// 		position: absolute;
+	// 		content: "";
+	// 		left: -5px;
+	// 		top: 40px;
+	// 		width: 2px;
+	// 		height: 10px;
+	// 	  background: $yellow;
+	// 	}
+	// }
+
+}
+
+@media ($tablet-widths) {
+	.contacts__info,
+	.contacts__form {
+		box-sizing: border-box;
+		width: 50%;
+	}
+	// .contacts__form input,
+	// .contacts__form  textarea,
+	// .contacts__input-comment {
+	// 	margin: 0 auto;
+	// }
+
+	// .contacts__input-comment {
+
+	// 	&::before {
+	// 		left: -20px;
+	// 	}
+	// }
+}
